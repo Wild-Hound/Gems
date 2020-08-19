@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.cm/css?family=Poopins:400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.content {
+  position: relative;
+}
+
+.content h2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 1s ease-in-out infinite;
+}
+
+/**
+animation is horrible due to bad clip path :(
+**/
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 55%,
+      13% 61%,
+      26% 72%,
+      40% 75%,
+      55% 65%,
+      65% 58%,
+      87% 55%,
+      96% 61%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 59%,
+      18% 73%,
+      40% 68%,
+      53% 56%,
+      73% 54%,
+      91% 53%,
+      99% 47%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
